@@ -1,6 +1,6 @@
 # Link Saver Chrome Extension
 
-Link Saver is a Chrome extension that allows users to save and organize web links into customizable groups. This tool is designed to help users manage their bookmarks more efficiently by providing a quick and easy way to save links directly from their browser.
+Link Saver is a Chrome extension that allows users to save and organize web links into customizable groups. This tool is designed to help users manage their bookmarks more efficiently by providing a quick and easy way to save links directly from their browser. For now, it is not publicly available in the google webstore extensions.
 
 ## Features
 
