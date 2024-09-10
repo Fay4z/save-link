@@ -5,14 +5,107 @@
     <style>
       body {
         width: 300px;
-        padding: 10px;
+        padding: 15px;
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        border: 1px solid #bdc3c7;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #2c3e50;
+        margin-top: 0;
+      }
+      #closeButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+      }
+      #closeButton:hover svg {
+        fill: #34495e;
+      }
+      .input-group {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      #groupName {
+        flex-grow: 1;
+        padding: 8px;
+        border: 1px solid #bdc3c7;
+        border-radius: 4px 0 0 4px;
+        box-sizing: border-box;
+      }
+      #saveLink {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 0 4px 4px 0;
+        transition: background-color 0.3s;
+      }
+      #saveLink:hover {
+        background-color: #2980b9;
+      }
+      .deleteButton {
+        color: white;
+        background-color: #e74c3c;
+        border: none;
+        padding: 2px 5px;
+        margin-left: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+        float: right;
+        transition: background-color 0.3s;
+      }
+      .deleteButton:hover {
+        background-color: #c0392b;
+      }
+      .linkItem {
+        margin-bottom: 8px;
+        overflow: hidden;
+        background-color: white;
+        padding: 8px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .linkUrl {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #2980b9;
+        text-decoration: none;
+      }
+      .linkUrl:hover {
+        text-decoration: underline;
+      }
+      h3 {
+        color: #34495e;
+        border-bottom: 1px solid #bdc3c7;
+        padding-bottom: 5px;
+        margin-top: 15px;
       }
     </style>
   </head>
   <body>
+    <div id="closeButton">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          fill="#7f8c8d"
+        />
+      </svg>
+    </div>
     <h1>Link Saver</h1>
-    <input type="text" id="groupName" placeholder="Group name" />
-    <button id="saveLink">Save Current Link</button>
+    <div class="input-group">
+      <input type="text" id="groupName" placeholder="Group name" />
+      <button id="saveLink">Save Current Link</button>
+    </div>
     <div id="savedLinks"></div>
     <script src="popup.js"></script>
   </body>
